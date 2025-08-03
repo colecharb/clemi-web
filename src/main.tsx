@@ -14,6 +14,7 @@ import Clementina from './routes/Clementina.tsx';
 import Sketchbook from './routes/Sketchbook.tsx';
 import MessKit from './routes/MessKit.tsx';
 import Contact from './routes/Contact.tsx';
+import ScrollToTop from './components/ScrollToTop.tsx';
 
 const ROUTES: (RouteProps & { path: string; name: string })[] = [
   { path: '/', name: 'Clementina', element: <Clementina />, index: true },
@@ -26,6 +27,7 @@ const ROUTES: (RouteProps & { path: string; name: string })[] = [
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Navigation routes={ROUTES} />
       <Routes>
         {ROUTES.map(({ path, element }) => (

@@ -4,7 +4,7 @@ import ProfessionalExperience from '../components/ProfessionalExperience';
 const professionalExperiences: ProfExperienceEntry[] = [
   {
     title: 'Senior Associate, Climate Justice',
-    timeframe: 'June 2024–Present',
+    timeframe: '2024–Present',
     company: 'B Lab US and Canada',
     bullets: [
       "Responsible for developing core programming within the Climate Justice program at B Lab US & Canada that furthers B Corporation's commitments to climate action",

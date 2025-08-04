@@ -11,13 +11,18 @@ type Props = {
 
 export default function ProfessionalExperience({ experience }: Props) {
   const { title, timeframe, company, bullets } = experience;
+
   return (
-    <div className='border-t-1 pt-2'>
-      <div className='flex justify-between'>
-        <span className='font-bold'>{title}</span>
-        <span className='text-right'>{timeframe}</span>
+    <div className='flex flex-col border-t box-border gap-1'>
+      <div className='flex justify-between items-top gap-5'>
+        <div className='pt-2 text-left font-bold'>{title}</div>
+        <div className='-mt-px bg-[var(--background)]'>
+          <div className='text-nowrap border-1 rounded-full rounded-tl-none py-2 px-3'>
+            {timeframe}
+          </div>
+        </div>
       </div>
-      {company}
+      <div>{company}</div>
       <ul>
         {bullets.map((bullet) => (
           <li key={bullet}>{bullet}</li>

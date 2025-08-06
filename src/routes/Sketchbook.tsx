@@ -61,7 +61,9 @@ const Sketchbook = () => {
       <h2>Sketch Book</h2>
       {SKETCHES.map((sketch, index) => (
         <Sketch
-          className={index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}
+          className={`flex items-center ${
+            index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+          }`}
           key={sketch.title}
           {...sketch}
         />

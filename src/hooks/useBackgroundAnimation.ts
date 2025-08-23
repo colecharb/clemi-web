@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 // Use relative path for Vite import.meta.glob
-const frameImports = import.meta.glob('/src/assets/images/shadows/*.PNG', {
+const frameImports = import.meta.glob('../assets/images/shadows/*.PNG', {
   eager: true,
 });
 

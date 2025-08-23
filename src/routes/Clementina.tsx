@@ -4,7 +4,7 @@ const Clementina = () => {
       <div className='flex flex-col lg:flex-row lg:place-items-start justify-center place-items-center gap-10'>
         <img
           className='max-h-60 w-auto rounded-full'
-          src='/images/clementina.png'
+          src='src/assets/images/clementina.png'
         />
         <div>
           <h2 className='mt-0'>Clementina Consens</h2>

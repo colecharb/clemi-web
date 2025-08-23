@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 // Use explicit imports for better build compatibility
-import shadow1 from '../assets/images/shadows/1.PNG';
-import shadow2 from '../assets/images/shadows/2.PNG';
-import shadow3 from '../assets/images/shadows/3.PNG';
-import shadow4 from '../assets/images/shadows/4.PNG';
-import shadow5 from '../assets/images/shadows/5.PNG';
+import shadow1 from '/src/assets/images/shadows/1.PNG';
+import shadow2 from '/src/assets/images/shadows/2.PNG';
+import shadow3 from '/src/assets/images/shadows/3.PNG';
+import shadow4 from '/src/assets/images/shadows/4.PNG';
+import shadow5 from '/src/assets/images/shadows/5.PNG';
 
 const frames = [shadow1, shadow2, shadow3, shadow4, shadow5];
 

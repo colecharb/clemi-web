@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-// Use relative path for Vite import.meta.glob
-const frameImports = import.meta.glob('../assets/images/shadows/*.PNG', {
-  eager: true,
-});
+// Use explicit imports for better build compatibility
+import shadow1 from '../assets/images/shadows/1.PNG';
+import shadow2 from '../assets/images/shadows/2.PNG';
+import shadow3 from '../assets/images/shadows/3.PNG';
+import shadow4 from '../assets/images/shadows/4.PNG';
+import shadow5 from '../assets/images/shadows/5.PNG';
 
-const frames = Object.values(frameImports).map(
-  (mod) => (mod as { default: string }).default,
-);
+const frames = [shadow1, shadow2, shadow3, shadow4, shadow5];
 
 const minFps = 0;
 const maxFps = 12;

@@ -12,7 +12,7 @@ const frames = Object.values(frameImports).map(
 const minFps = 0;
 const maxFps = 12;
 const fpsMultiplier = 400; // tweak this for sensitivity
-const fpsDecayRate = 0.95; // how quickly FPS decays when not scrolling (0.95 = 5% decay per frame)
+const fpsDecayRate = 0.99; // how quickly FPS decays when not scrolling (0.95 = 5% decay per frame)
 const scrollTimeout = 100; // ms after last scroll before decay starts
 
 // type Props = {
@@ -20,11 +20,8 @@ const scrollTimeout = 100; // ms after last scroll before decay starts
 // };
 
 const useBackgroundAnimation = () => {
-  // const { baseFps } = props;
-  // console.log(frames);
-  // const [frames, setFrames] = useState<string[]>([]);
   const [index, setIndex] = useState(0);
-  const frameRef = useRef(0);
+  const frameRef = useRef(minFps);
   const requestRef = useRef<number | null>(null);
   const lastTimeRef = useRef<number | null>(null);
 

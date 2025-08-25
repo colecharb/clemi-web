@@ -8,7 +8,7 @@ const Navigation = ({ routes }: Props) => {
   return (
     <>
       <div className='fixed left-0 right-0 bottom-0 sm:bottom-auto sm:top-0 z-30 backdrop-blur-sm'>
-        <div className='flex px-10 py-5 gap-3 overflow-x-scroll pointer-events-auto place-items-center'>
+        <div className='flex px-10 py-5 gap-3 overflow-x-auto no-scrollbar pointer-events-auto place-items-center'>
           <div className='absolute z-5 left-0 bottom-0 top-0 w-12 bg-gradient-to-r from-black to-transparent sm:bg-none' />
           <div className='absolute right-0 bottom-0 top-0 w-12 bg-gradient-to-l from-black to-transparent sm:bg-none' />
 

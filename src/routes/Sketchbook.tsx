@@ -1,11 +1,12 @@
+import DownArrow from '../components/DownArrow';
 import Sketch, { type SketchProps } from '../components/SketchbookEntry';
 
 const SKETCHES: SketchProps[] = [
-  {
-    title: 'Animation Projects',
-    abstract:
-      'A collection of animation projects exploring various techniques and storytelling methods.',
-  },
+  // {
+  //   title: 'Animation Projects',
+  //   abstract:
+  //     'A collection of animation projects exploring various techniques and storytelling methods.',
+  // },
   {
     title: 'Rooted and Rising (Short Film)',
     abstract:
@@ -58,16 +59,19 @@ const SKETCHES: SketchProps[] = [
 const Sketchbook = () => {
   return (
     <>
-      <h2>Sketch Book</h2>
-      <p>
-        Clementina Consens is an artist and storyteller whose work moves at the
-        intersection of cinematography, animation, and community memory. Guided
-        by themes of resilience, community and reconnection to land, their
-        practice explores how visual media can serve as both a tool for healing
-        and a catalyst for collective imagination. With a focus on the tactile,
-        the intimate, and the transformative, Clementina's projects illuminate
-        the sacred ties between people, place, and presence.
-      </p>
+      <div className='min-h-[85dvh] place-content-center'>
+        <h2>Sketch Book</h2>
+        <p>
+          Clementina Consens is an artist and storyteller whose work moves at
+          the intersection of cinematography, animation, and community memory.
+          Guided by themes of resilience, community and reconnection to land,
+          their practice explores how visual media can serve as both a tool for
+          healing and a catalyst for collective imagination. With a focus on the
+          tactile, the intimate, and the transformative, Clementina's projects
+          illuminate the sacred ties between people, place, and presence.
+        </p>
+        <DownArrow />
+      </div>
       {SKETCHES.map((sketch, index) => (
         <Sketch
           className={`flex items-start ${

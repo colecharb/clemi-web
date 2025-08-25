@@ -1,3 +1,4 @@
+import DownArrow from '../components/DownArrow';
 import type { ProfExperienceEntry } from '../components/ProfessionalExperience';
 import ProfessionalExperience from '../components/ProfessionalExperience';
 
@@ -96,28 +97,32 @@ const professionalExperiences: ProfExperienceEntry[] = [
 const FieldNotes = () => {
   return (
     <>
-      <h2>Field Notes</h2>
-      <p>
-        Clementina Consens is a creative professional with a track record of
-        designing and stewarding impactful climate action strategies rooted in
-        care, equity, and systems thinking. With over seven years of experience
-        in stakeholder engagement, holistic project management, equitable data
-        analysis, and regenerative research, they bring a grounded,
-        collaborative presence to every project.
-      </p>
-      <p>
-        Their work spans climate justice, Indigenous-led environmental
-        stewardship, and organizational transformation. Whether facilitating
-        cross-sector dialogue or co-developing community-based frameworks for
-        action, Clementina is committed to advancing climate solutions that
-        reflect the world we long to live in—one centered on collective care,
-        interdependence, and ecological accountability.
-      </p>
-      <p>
-        Their strength lies in cultivating spaces for shared visioning and
-        creative problem-solving, and in building bridges across disciplines to
-        spark meaningful, lasting change.
-      </p>
+      <div className='min-h-[85dvh] place-content-center'>
+        <h2>Field Notes</h2>
+        <p>
+          Clementina Consens is a creative professional with a track record of
+          designing and stewarding impactful climate action strategies rooted in
+          care, equity, and systems thinking. With over seven years of
+          experience in stakeholder engagement, holistic project management,
+          equitable data analysis, and regenerative research, they bring a
+          grounded, collaborative presence to every project.
+        </p>
+        <p>
+          Their work spans climate justice, Indigenous-led environmental
+          stewardship, and organizational transformation. Whether facilitating
+          cross-sector dialogue or co-developing community-based frameworks for
+          action, Clementina is committed to advancing climate solutions that
+          reflect the world we long to live in—one centered on collective care,
+          interdependence, and ecological accountability.
+        </p>
+        <p>
+          Their strength lies in cultivating spaces for shared visioning and
+          creative problem-solving, and in building bridges across disciplines
+          to spark meaningful, lasting change.
+        </p>
+
+        <DownArrow />
+      </div>
 
       <div>
         <h3>Education</h3>

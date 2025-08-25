@@ -1,36 +1,42 @@
+import DownArrow from '../components/DownArrow';
+
 const Clementina = () => {
   return (
     <div className='flex flex-col gap-10'>
-      <div className='flex flex-col lg:flex-row lg:place-items-start justify-center place-items-center gap-10'>
-        <img
-          className='max-h-60 w-auto rounded-full'
-          src='/images/clementina.png'
-        />
-        <div>
-          <h2 className='mt-0'>Clementina Consens</h2>
+      <div className='flex flex-col min-h-[85dvh] place-items-center justify-center'>
+        <div className='flex  flex-col lg:flex-row lg:place-items-center place-items-center gap-10'>
+          <img
+            className='max-h-60 w-auto rounded-full'
+            src='/images/clementina.png'
+          />
+          <div>
+            <h2 className='mt-0'>Clementina Consens</h2>
 
-          <p>
-            is an artist, researcher, and environmental scientist committed to
-            imagining and implementing strategies for organizations doing their
-            part in building a better future for all. They currently serve as
-            the Senior Associate of Climate Justice at B Lab U.S. & Canada,
-            where they support businesses in taking climate action grounded in
-            justice—leveraging systems thinking, environmental science, and
-            creative strategy to foster climate solutions rooted in care and
-            accountability.
-          </p>
-          <p>
-            With a Master's in Climate Change, a Bachelor's in Environmental
-            Geoscience, and a Certificate in Youth Climate Leadership,
-            Clementina brings both enthusiasm and tenderness to every
-            collaboration. Their work spans climate justice, Indigenous-led
-            environmental stewardship, and health and wellness. As a leader and
-            organizational strategist, Clementina empowers those she works with
-            by designing programs with a team's strengths in mind. She leads by
-            cultivating authentic relationships that build trust and develop the
-            confidence to transform cultures.
-          </p>
+            <p>
+              is an artist, researcher, and environmental scientist committed to
+              imagining and implementing strategies for organizations doing
+              their part in building a better future for all. They currently
+              serve as the Senior Associate of Climate Justice at B Lab U.S. &
+              Canada, where they support businesses in taking climate action
+              grounded in justice—leveraging systems thinking, environmental
+              science, and creative strategy to foster climate solutions rooted
+              in care and accountability.
+            </p>
+            <p>
+              With a Master's in Climate Change, a Bachelor's in Environmental
+              Geoscience, and a Certificate in Youth Climate Leadership,
+              Clementina brings both enthusiasm and tenderness to every
+              collaboration. Their work spans climate justice, Indigenous-led
+              environmental stewardship, and health and wellness. As a leader
+              and organizational strategist, Clementina empowers those she works
+              with by designing programs with a team's strengths in mind. She
+              leads by cultivating authentic relationships that build trust and
+              develop the confidence to transform cultures.
+            </p>
+          </div>
         </div>
+
+        <DownArrow />
       </div>
 
       <div>

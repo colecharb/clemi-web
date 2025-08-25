@@ -4,11 +4,14 @@ const Clementina = () => {
   return (
     <div className='flex flex-col gap-10'>
       <div className='flex flex-col min-h-[85dvh] place-items-center justify-center'>
-        <div className='flex  flex-col lg:flex-row lg:place-items-center place-items-center gap-10'>
-          <img
-            className='max-h-60 w-auto rounded-full'
-            src='/images/clementina.png'
-          />
+        <div className='flex flex-col lg:flex-row lg:place-items-center place-items-center gap-10'>
+          <div className='flex h-60 rounded-full aspect-square overflow-clip'>
+            <img
+              className='h-full'
+              src='/images/clementina.JPG'
+            />
+          </div>
+
           <div>
             <h2 className='mt-0'>Clementina Consens</h2>
 

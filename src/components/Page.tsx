@@ -6,7 +6,7 @@ const Page = ({ children }: PropsWithChildren) => {
   return (
     <div className='p-10 max-w-4xl mx-auto pt-30 pb-[400px]'>
       <img
-        className='min-h-full min-w-full fixed bottom-0 left-0 -z-10 blur-sm opacity-50'
+        className='min-h-full min-w-full fixed bottom-0 left-0 -z-10 blur-sm opacity-40'
         src={activeFrame}
       />
       {children}

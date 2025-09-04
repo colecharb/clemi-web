@@ -1,0 +1,73 @@
+import Masonry from 'react-masonry-css';
+import Lightbox from 'yet-another-react-lightbox';
+import { Zoom } from 'yet-another-react-lightbox/plugins';
+import 'yet-another-react-lightbox/styles.css';
+
+import { useEffect, useState } from 'react';
+import photos from '../photos';
+
+const PhotoAlbum = () => {
+  const [index, setIndex] = useState(-1);
+  const [shuffledPhotos, setShuffledPhotos] = useState<string[]>([]);
+
+  const shufflePhotos = () =>
+    setShuffledPhotos(photos.sort(() => Math.random() - 0.5));
+
+  useEffect(() => shufflePhotos(), []);
+
+  const breakpointColumnsObj = {
+    default: 3,
+    800: 2,
+    // 700: 1,
+  };
+
+  return (
+    <>
+      {/* <div className='min-h-[85dvh] place-content-center'>
+        <p>Some film photos! [ expand this ]</p>
+        <DownArrow />
+      </div> */}
+
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className='my-masonry-grid'
+        columnClassName='my-masonry-grid_column'
+      >
+        {shuffledPhotos.map((photo, i) => (
+          <img
+            key={photo}
+            src={photo}
+            style={{
+              width: '100%',
+              display: 'block',
+              borderRadius: '8px',
+              marginBottom: '16px',
+              cursor: 'pointer',
+              objectFit: 'cover',
+            }}
+            onClick={() => setIndex(i)}
+          />
+        ))}
+      </Masonry>
+
+      <Lightbox
+        open={index >= 0}
+        close={() => setIndex(-1)}
+        slides={shuffledPhotos.map((src) => ({ src }))}
+        index={index}
+        plugins={[Zoom]}
+        on={{
+          view: ({ index: newIndex }) => setIndex(newIndex),
+        }}
+        animation={{ navigation: 0 }}
+        render={{
+          buttonZoom: () => null,
+          buttonPrev: () => null,
+          buttonNext: () => null,
+        }}
+      />
+    </>
+  );
+};
+
+export default PhotoAlbum;

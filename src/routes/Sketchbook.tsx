@@ -49,12 +49,7 @@ const SKETCHES: SketchProps[] = [
       />
     ),
   },
-  {
-    title: 'Film Photography',
-    abstract:
-      'A series of film photography works capturing unique moments and perspectives.',
-  },
-];
+];  
 
 const Sketchbook = () => {
   return (

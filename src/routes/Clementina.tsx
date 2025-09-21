@@ -16,25 +16,31 @@ const Clementina = () => {
             <h2 className='mt-0'>Clementina Consens</h2>
 
             <p>
-              is an artist, researcher, and environmental scientist committed to
-              imagining and implementing strategies for organizations doing
-              their part in building a better future for all. They currently
-              serve as the Senior Associate of Climate Justice at B Lab U.S. &
-              Canada, where they support businesses in taking climate action
-              grounded in justice—leveraging systems thinking, environmental
-              science, and creative strategy to foster climate solutions rooted
-              in care and accountability.
+              is an artist, researcher, and environmental scientist with over
+              seven years of experience designing and leading climate justice
+              strategies across sectors. Currently serving as the Senior
+              Associate of Climate Justice at B Lab U.S. & Canada, they help
+              businesses transform how they do business—empowering them to take
+              climate action rooted in justice, accountability, and collective
+              well-being.
             </p>
             <p>
               With a Master's in Climate Change, a Bachelor's in Environmental
               Geoscience, and a Certificate in Youth Climate Leadership,
-              Clementina brings both enthusiasm and tenderness to every
-              collaboration. Their work spans climate justice, Indigenous-led
-              environmental stewardship, and health and wellness. As a leader
-              and organizational strategist, Clementina empowers those she works
-              with by designing programs with a team's strengths in mind. She
-              leads by cultivating authentic relationships that build trust and
-              develop the confidence to transform cultures.
+              Clementina brings expertise in strategic design, equitable data
+              analysis, and systems thinking to every collaboration. Their
+              leadership style emphasizes cultivating trust, building authentic
+              relationships, and empowering teams to leverage their strengths
+              toward lasting culture change.
+            </p>
+            <p>
+              As a speaker, facilitator, and consultant, Clementina has designed
+              and led workshops on climate justice, sustainable self-care, and
+              organizational transformation for diverse audiences—including
+              non-profits, businesses, and youth communities. Their approach
+              blends scientific rigor with creative strategy, making complex
+              issues accessible and actionable while inspiring collective
+              imagination for a more just future.
             </p>
           </div>
         </div>
@@ -53,9 +59,9 @@ const Clementina = () => {
           on sustainable self-care and burnout prevention for non-profit teams.
         </p>
         <p>
-          At B Lab U.S. & Canada, Clementina supports businesses in transforming
-          how they respond to the climate crisis, ensuring solutions are rooted
-          in justice, accountability, and collective well-being.
+          At B Lab U.S. & Canada, Clementina leads on workshop and educational
+          program design for empowering B Corps to meet the climate challenges
+          of our time.
         </p>
       </div>
 
@@ -73,12 +79,13 @@ const Clementina = () => {
       <div>
         <h3>Personal</h3>
         <p>
-          Clementina is most at home when visiting Uruguay, sharing mate by the
-          ocean, or cooking over a fire with loved ones. They carry with them a
-          love for place-based traditions and a passion for cooking as a way of
-          showing care. You will often find her exploring the world, trying new
-          cuisines, camping, swimming, or otherwise occupied by enjoying the
-          passage of time.
+          Clementina is most at home when she's either in Uruguay or the Great
+          Lakes region, sharing a mate by the ocean, or cooking over a fire with
+          their loved ones. They carry with them an admiration for place-based
+          traditions and a passion for cooking as a way of showing care. You
+          will often find them exploring the world, trying new cuisines,
+          camping, swimming, or otherwise occupied by enjoying the passage of
+          time.
         </p>
       </div>
     </div>

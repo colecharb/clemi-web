@@ -1,4 +1,9 @@
 import { NavLink, type RouteProps } from 'react-router-dom';
+import {
+  defaultLinkProps,
+  instagramUrl,
+  linkedInUrl,
+} from '../constants.ts/socials';
 
 type Props = {
   routes: (RouteProps & { path: string; name: string })[];
@@ -27,18 +32,16 @@ const Navigation = ({ routes }: Props) => {
           ))}
 
           <a
-            href='https://instagram.com/clemencuentos'
-            target='_blank'
-            rel='noopener noreferrer'
+            {...defaultLinkProps}
+            href={instagramUrl}
             className='font-semibold px-2 ml-auto'
             title='Instagram'
           >
             ig
           </a>
           <a
-            href='https://www.linkedin.com/in/clementina-consens-151b16b7'
-            target='_blank'
-            rel='noopener noreferrer'
+            {...defaultLinkProps}
+            href={linkedInUrl}
             className='font-semibold px-2'
             title='LinkedIn'
           >

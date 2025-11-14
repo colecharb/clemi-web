@@ -16,10 +16,13 @@ import Sketchbook from './routes/Sketchbook.tsx';
 import Contact from './routes/Contact.tsx';
 import ScrollToTop from './components/ScrollToTop.tsx';
 import PhotoAlbum from './routes/PhotoAlbum.tsx';
+import Kitchen from './routes/Kitchen.tsx';
 
 const ROUTES: (RouteProps & { path: string; name: string })[] = [
   { path: '/', name: 'Clementina', element: <Clementina />, index: true },
   { path: '/field-notes', name: 'Field Notes', element: <FieldNotes /> },
+  { path: '/kitchen', name: 'Kitchen', element: <Kitchen /> },
+
   { path: '/sketchbook', name: 'Sketchbook', element: <Sketchbook /> },
   { path: '/photo-album', name: 'Photo Album', element: <PhotoAlbum /> },
   // { path: '/mess-kit', name: 'Mess Kit', element: <MessKit /> },

@@ -6,16 +6,18 @@ import {
 
 const Contact = () => {
   return (
-    <div className='flex flex-col min-h-[85dvh] place-items-center justify-center'>
+    <div className='flex flex-col min-h-[85dvh] justify-center'>
+      <h3>
+        Say hello to{' '}
+        <a href='mailto:earthtoclemi@gmail.com'>earthtoclemi@gmail.com</a>!
+      </h3>
       <p>
-        Clementina welcomes conversations with collaborators, communities, and
+        I welcome conversations with collaborators, communities, and
         organizations who share a commitment to care, justice, and creativity.
-        Whether you're curious about working together on a project, inviting
-        them to speak or facilitate, or exploring new ideas at the intersection
-        of climate justice and storytelling, they'd love to connect.
-      </p>
-      <p>
-        You can find Clementina on{' '}
+        Whether you're curious about my micro-catering, inviting me to speak or
+        facilitate, or exploring new ideas at the intersection of climate
+        justice and storytelling, please feel free to reach out. You can also
+        find me on{' '}
         <a
           {...defaultLinkProps}
           href={linkedInUrl}
@@ -29,7 +31,7 @@ const Contact = () => {
         >
           Instagram
         </a>
-        , where you can message them directly to begin a conversation.
+        , where you can message me directly to begin a conversation.
       </p>
     </div>
   );

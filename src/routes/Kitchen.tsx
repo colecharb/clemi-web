@@ -43,6 +43,23 @@ const Kitchen = () => {
         <DownArrow />
       </div>
 
+      <div className='flex flex-row gap-10 max-w-full overflow-hidden'>
+        <div className='flex-1'>
+          <img
+            className='w-full h-auto'
+            src='/images/sampleMenus/SUMMER.png'
+            alt='Summer menu'
+          />
+        </div>
+        <div className='flex-1'>
+          <img
+            className='w-full h-auto'
+            src='/images/sampleMenus/WINTER.png'
+            alt='Winter menu'
+          />
+        </div>
+      </div>
+
       <h3>Retreat & Event Offerings</h3>
 
       <p>

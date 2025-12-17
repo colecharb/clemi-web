@@ -8,7 +8,7 @@ export type SketchProps = PropsWithChildren<{
 function Sketch(props: SketchProps & { className?: string }) {
   const { title, abstract, children, className } = props;
   return (
-    <div className={`border-t-1 py-10 gap-10 ${className}`}>
+    <div className={`border-t-white/25 border-t-1 py-10 gap-10 ${className}`}>
       <div className="flex flex-col flex-3">
         <h3 className="mt-0">{title}</h3>
         {abstract}

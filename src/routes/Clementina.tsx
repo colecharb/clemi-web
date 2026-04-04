@@ -33,14 +33,14 @@ const Clementina = () => {
             href='https://clemiworld.gumroad.com/l/earthtoclemi-mailclub'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex-shrink-0 w-64 border border-[--text] rounded-xl overflow-clip flex flex-col hover:opacity-80 transition-opacity'
+            className='flex-shrink-0 border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
           >
             <img
               src='/images/Gum_road.png'
               alt='seasonal soft discipline mail club'
-              className='w-full aspect-square object-cover'
+              className='h-32 w-32 object-cover flex-shrink-0'
             />
-            <div className='p-5 flex flex-col gap-2'>
+            <div className='p-4 flex flex-col gap-2 justify-center'>
               <p className='mb-0 font-bold'>seasonal soft discipline mail club</p>
               <p className='mb-0 text-sm opacity-70'>summer cohort</p>
             </div>
@@ -50,14 +50,14 @@ const Clementina = () => {
             href='https://tpl.ca/programs-and-classes/featured/environmentalist-in-residence/?_gl=1*1iuwquu*_ga*MTgzNjE0ODM1Ny4xNzczODAwMzYz*_ga_G99DMMNG39*czE3NzUyNjkzMTkkbzUkZzEkdDE3NzUyNjkzMTkkajYwJGwwJGgw*_ga_VGX2640F9T*czE3NzUyNjkzMTkkbzUkZzEkdDE3NzUyNjkzMTkkajYwJGwwJGgw'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex-shrink-0 w-64 border border-[--text] rounded-xl overflow-clip flex flex-col hover:opacity-80 transition-opacity'
+            className='flex-shrink-0 border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
           >
             <img
               src='/images/TPLxETC.png'
               alt='Environmentalist in Residence'
-              className='w-full aspect-square object-cover'
+              className='h-32 w-32 object-cover flex-shrink-0'
             />
-            <div className='p-5 flex flex-col gap-2'>
+            <div className='p-4 flex flex-col gap-2 justify-center'>
               <p className='mb-0 font-bold'>Environmentalist in Residence</p>
               <p className='mb-0 text-sm opacity-70'>Spring Season at Malvern</p>
             </div>
@@ -67,14 +67,14 @@ const Clementina = () => {
             href='https://clemiworld.gumroad.com/l/earthtoclemiandmiddleearthwellness'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex-shrink-0 w-64 border border-[--text] rounded-xl overflow-clip flex flex-col hover:opacity-80 transition-opacity'
+            className='flex-shrink-0 border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
           >
             <img
-              src='/images/ETCxMEW.jpeg'
+              src='/images/ETCxMEW-square.png'
               alt='soft discipline: showing up without burning out'
-              className='w-full aspect-square object-cover'
+              className='h-32 w-32 object-cover flex-shrink-0'
             />
-            <div className='p-5 flex flex-col gap-2'>
+            <div className='p-4 flex flex-col gap-2 justify-center'>
               <p className='mb-0 font-bold'>
                 soft discipline: showing up without burning out
               </p>

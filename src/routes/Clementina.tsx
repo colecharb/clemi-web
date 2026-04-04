@@ -28,12 +28,12 @@ const Clementina = () => {
 
       <div>
         <h3>In Season</h3>
-        <div className='flex flex-row gap-6 overflow-x-auto no-scrollbar pb-4'>
+        <div className='flex flex-col gap-4'>
           <a
             href='https://clemiworld.gumroad.com/l/earthtoclemi-mailclub'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex-shrink-0 border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
+            className='border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
           >
             <img
               src='/images/Gum_road.png'
@@ -50,7 +50,7 @@ const Clementina = () => {
             href='https://tpl.ca/programs-and-classes/featured/environmentalist-in-residence/?_gl=1*1iuwquu*_ga*MTgzNjE0ODM1Ny4xNzczODAwMzYz*_ga_G99DMMNG39*czE3NzUyNjkzMTkkbzUkZzEkdDE3NzUyNjkzMTkkajYwJGwwJGgw*_ga_VGX2640F9T*czE3NzUyNjkzMTkkbzUkZzEkdDE3NzUyNjkzMTkkajYwJGwwJGgw'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex-shrink-0 border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
+            className='border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
           >
             <img
               src='/images/TPLxETC.png'
@@ -67,7 +67,7 @@ const Clementina = () => {
             href='https://clemiworld.gumroad.com/l/earthtoclemiandmiddleearthwellness'
             target='_blank'
             rel='noopener noreferrer'
-            className='flex-shrink-0 border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
+            className='border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
           >
             <img
               src='/images/ETCxMEW-square.png'

@@ -1,10 +1,12 @@
 import DownArrow from '../components/DownArrow';
+import TestimonialCarousel from '../components/TestimonialCarousel';
 
 const Kitchen = () => {
   return (
     <>
       <div className='min-h-[85dvh] place-content-center'>
         <h2>Kitchen</h2>
+        <TestimonialCarousel />
         <h3>Micro-catering: Cooking with Intention</h3>
         <p>
           Food is one of the most immediate ways we experience care. My approach
@@ -27,12 +29,6 @@ const Kitchen = () => {
           spiritual, or healing processes. My meals are adventurous yet
           comforting, simple yet elevated, allowing participants to feel
           revitalized and connected without being overstimulated.
-        </p>
-        <p>
-          Sourcing is part of the story, too. I prioritize local and sustainable
-          ingredients, minimize waste, and design menus that honor the land
-          we're on. My cooking is not about luxury for its own sake — it's about
-          integrity, nourishment, and beauty in simplicity.
         </p>
         <p>
           What I offer is more than catering. It's an experience that nourishes

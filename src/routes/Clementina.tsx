@@ -20,8 +20,19 @@ const Clementina = () => {
             themselves and their communities, a devotional approach to rituals
             aligned with nature's cyclical cues. She is most at home either in
             Uruguay or the Great Lakes region, sharing a mate by the ocean, or
-            cooking over a fire with their loved ones. Clementina welcomes you
-            to explore her in season offerings:
+            cooking over a fire with her loved ones.
+          </p>
+          <p>
+            Clementina welcomes you to explore her in-season offerings and take
+            the{' '}
+            <a
+              href='https://tally.so/r/xXZVEE'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              soft discipline archetype quiz
+            </a>{' '}
+            to learn more about your nature.
           </p>
         </div>
       </div>

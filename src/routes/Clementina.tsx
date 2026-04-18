@@ -41,6 +41,23 @@ const Clementina = () => {
         <h3>In Season</h3>
         <div className='flex flex-col gap-4'>
           <a
+            href='https://www.eventbrite.com/e/life-archeology-a-full-day-wellness-retreat-in-excavating-the-self-tickets-1987705292036?aff=oddtdtcreator'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
+          >
+            <img
+              src='/images/Life Archeology Square.png'
+              alt='Life Archeology'
+              className='h-32 w-32 object-cover flex-shrink-0'
+            />
+            <div className='p-4 flex flex-col gap-2 justify-center'>
+              <p className='mb-0 font-bold'>Life Archeology</p>
+              <p className='mb-0 text-sm opacity-70'>A full-day wellness retreat in excavating the self</p>
+            </div>
+          </a>
+
+          <a
             href='https://clemiworld.gumroad.com/l/earthtoclemi-mailclub'
             target='_blank'
             rel='noopener noreferrer'

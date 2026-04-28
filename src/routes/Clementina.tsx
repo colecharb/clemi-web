@@ -47,13 +47,13 @@ const Clementina = () => {
             className='border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
           >
             <img
-              src='/images/Life Archeology Square.png'
+              src='/images/Life Archeology Square (1).png'
               alt='Life Archeology'
               className='h-32 w-32 object-cover flex-shrink-0'
             />
             <div className='p-4 flex flex-col gap-2 justify-center'>
               <p className='mb-0 font-bold'>Life Archeology</p>
-              <p className='mb-0 text-sm opacity-70'>A full-day wellness retreat in excavating the self</p>
+              <p className='mb-0 text-sm opacity-70'>An introduction to excavating the self</p>
             </div>
           </a>
 

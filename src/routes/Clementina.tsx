@@ -41,6 +41,23 @@ const Clementina = () => {
         <h3>In Season</h3>
         <div className='flex flex-col gap-4'>
           <a
+            href='https://clemiworld.gumroad.com/l/foundationsofsoftdiscipline'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
+          >
+            <img
+              src='/images/FoundationsSDsquare.jpg'
+              alt='Foundations of Soft Discipline'
+              className='h-32 w-32 object-cover flex-shrink-0'
+            />
+            <div className='p-4 flex flex-col gap-2 justify-center'>
+              <p className='mb-0 font-bold'>Foundations of Soft Discipline</p>
+              <p className='mb-0 text-sm opacity-70'>free introduction to soft discipline</p>
+            </div>
+          </a>
+
+          <a
             href='https://clemiworld.gumroad.com/l/earthtoclemi-mailclub'
             target='_blank'
             rel='noopener noreferrer'

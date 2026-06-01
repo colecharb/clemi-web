@@ -1,91 +1,113 @@
-@import 'tailwindcss';
-@import './styles/fonts.css';
+@import "tailwindcss";
+@import "./styles/fonts.css";
 
 :root {
-  --background: #1e2c0d;
-  --text: #f0d9b8;
+    --background: #1e2c0d;
+    --text: #f0d9b8;
 }
 
 body {
-  overscroll-behavior: none;
-  font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: var(--background);
-  color: var(--text);
-  border: var(--text);
-  @apply underline-offset-3;
+    overscroll-behavior: none;
+    font-family:
+        "Atkinson Hyperlegible Next",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    border: var(--text);
+    @apply underline-offset-3;
 }
 
 a {
-  @apply underline;
+    @apply underline;
 }
 
 @layer utilities {
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
 
 @layer base {
-  div {
-    @apply text-lg;
-  }
+    div {
+        @apply text-lg;
+    }
 
-  p {
-    @apply text-lg mb-4;
-  }
+    p {
+        @apply text-lg mb-4;
+    }
 
-  h2 {
-    @apply text-5xl font-bold mt-8 mb-6;
-  }
+    h2 {
+        @apply text-5xl font-bold mt-8 mb-6;
+    }
 
-  h3 {
-    @apply text-3xl font-bold mt-8 mb-6;
-  }
+    h3 {
+        @apply text-3xl font-bold mt-8 mb-6;
+    }
 
-  h4 {
-    @apply text-2xl font-bold mt-6 mb-3;
-  }
+    h4 {
+        @apply text-2xl font-bold mt-6 mb-3;
+    }
 
-  h5 {
-    @apply text-xl font-bold mt-6 mb-2;
-  }
+    h5 {
+        @apply text-xl font-bold mt-6 mb-2;
+    }
 
-  ul {
-    @apply flex flex-col gap-2 list-disc mt-4 mb-4;
-  }
+    ul {
+        @apply flex flex-col gap-2 list-disc mt-4 mb-4;
+    }
+}
+
+/* feathered/hazy edges — fades all four sides of an image into transparency */
+.feathered-edges {
+    -webkit-mask-image:
+        linear-gradient(to right, transparent, #000 30%, #000 70%, transparent),
+        linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent, #000 30%, #000 70%, transparent),
+        linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent);
+    mask-composite: intersect;
 }
 
 /* testimonial carousel slide-in animation */
 @keyframes testimonial-slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(32px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .testimonial-slide {
-  animation: testimonial-slide-in 0.45s ease-out both;
+    animation: testimonial-slide-in 0.45s ease-out both;
 }
 
 /* for react-masonry-css */
 .my-masonry-grid {
-  display: flex;
-  margin-left: -16px;
-  width: auto;
-  /* gap: 12px; */
+    display: flex;
+    margin-left: -16px;
+    width: auto;
+    /* gap: 12px; */
 }
 
 .my-masonry-grid_column {
-  padding-left: 16px;
-  background-clip: padding-box;
+    padding-left: 16px;
+    background-clip: padding-box;
 }

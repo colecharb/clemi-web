@@ -1,37 +1,50 @@
+import SubscribePicker from "../components/SubscribePicker";
+
 const FieldGuide = () => {
   return (
-    <div className='flex flex-col gap-10'>
+    <div className="flex flex-col gap-16">
       <div>
-        <h2 className='mt-0'>You already know the way home.</h2>
-        <p className='text-2xl'>
+        <h2 className="mt-0 text-center">You already know the way home.</h2>
+        <p className="text-2xl text-center">
           The Field Guide is just here to walk with you.
         </p>
+        <button
+          type="button"
+          onClick={() =>
+            document
+              .getElementById("subscribe")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="block w-64 mx-auto mt-8 border-2 border-[#fd7e01] text-[#fd7e01] rounded-xl font-bold py-3 hover:opacity-90 transition-opacity cursor-pointer"
+        >
+          Subscribe
+        </button>
       </div>
 
-      <div className='flex flex-col md:flex-row gap-8 items-center justify-center'>
+      <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
         <img
-          src='/images/ETC-Website.jpeg'
-          alt='The Earth To Clemi Field Guide'
-          className='w-full md:w-72 flex-shrink-0 rounded-lg object-cover'
+          src="/images/ETC-Website.jpeg"
+          alt="The Earth To Clemi Field Guide"
+          className="w-full md:w-72 flex-shrink-0 rounded-lg object-cover feathered-edges"
         />
-        <div className='text-xl italic flex flex-col gap-4'>
-          <p className='mb-0'>A seasonal compass for soft discipline.</p>
-          <p className='mb-0'>Original animal illustrations.</p>
-          <p className='mb-0'>Rituals designed for your archetype.</p>
-          <p className='mb-0'>Reflections to see yourself more clearly.</p>
-          <p className='mb-0'>Your companion as you return to self.</p>
+        <div className="text-xl italic font-light flex flex-col gap-4 text-center md:text-left">
+          <p className="mb-0">A seasonal compass for soft discipline.</p>
+          <p className="mb-0">Original animal illustrations.</p>
+          <p className="mb-0">Rituals designed for your archetype.</p>
+          <p className="mb-0">Reflections to see yourself more clearly.</p>
+          <p className="mb-0">Your companion as you return to self.</p>
         </div>
       </div>
 
       <div>
-        <h3 className='mt-0'>A Field Guide for Your Inner-World</h3>
+        <h3 className="mt-0">A Field Guide for Your Inner-World</h3>
         <p>
           The Earth To Clemi Field Guide is a homecoming. Your seasonal guide
           for practicing the art of living in honest rhythm with the natural
-          world. Noticing what you need, resting when rest is required.
-          Inspired by vintage National Geographic and Audubon Naturalist Guides
-          and structured as a personal practice journal. Designed with the
-          rigor of a field naturalist and the intimacy of an older sister.
+          world. Noticing what you need, resting when rest is required. Inspired
+          by vintage National Geographic and Audubon Naturalist Guides and
+          structured as a personal practice journal. Designed with the rigor of
+          a field naturalist and the intimacy of an older sister.
         </p>
         <p>
           Each volume is built around a season and an animal guide. You'll
@@ -66,45 +79,46 @@ const FieldGuide = () => {
             <strong>Astrology & Inner Knowing</strong> — The natural world
             mirrors our internal seasons. The Field Guide calls on astrology and
             naturalist portraits of our animal guides to ground you in belonging
-            and connection with nature's intelligence, and builds your confidence
-            to trust that inner knowing.
+            and connection with nature's intelligence, and builds your
+            confidence to trust that inner knowing.
           </li>
         </ul>
       </div>
 
-      <img
-        src='/images/ETC-Wesbite2.jpeg'
-        alt='The Field Guide spread'
-        className='w-full rounded-lg object-cover'
-      />
+      <div className="px-8">
+        <img
+          src="/images/ETC-Wesbite2.jpeg"
+          alt="The Field Guide spread"
+          className="w-full rounded-lg object-cover feathered-edges"
+        />
+      </div>
 
       <div>
-        <h3 className='mt-0'>On Soft Discipline…</h3>
+        <h3 className="mt-0">On Soft Discipline…</h3>
         <p>
           Soft discipline is rooted in seasonal living, a return to self, and
-          reconnection to the natural world. It's the understanding that you
-          are not separate from nature; you are nature. Your energy follows
-          your life's seasons. Your body has rhythms. Your soul knows things
-          your mind hasn't caught up to yet.
+          reconnection to the natural world. It's the understanding that you are
+          not separate from nature; you are nature. Your energy follows your
+          life's seasons. Your body has rhythms. Your soul knows things your
+          mind hasn't caught up to yet.
         </p>
         <p>
-          This Field Guide walks you through that reconnection. An invitation
-          to be compassionately disciplined with how you show up for yourself.
-          To know when to trust the quiet pull toward rest. To recognize when
+          This Field Guide walks you through that reconnection. An invitation to
+          be compassionately disciplined with how you show up for yourself. To
+          know when to trust the quiet pull toward rest. To recognize when
           effort is required. To choose peace in the present moment.
         </p>
       </div>
 
       <div>
-        <h3 className='mt-0'>What You Get</h3>
+        <h3 className="mt-0">What You Get</h3>
         <p>
           <strong>Print Edition:</strong> 50 pages, eco-friendly
           risograph-printed by Vide Press in Toronto, with full-color
           illustrations. Perfect-bound booklet designed to live in your bag or
           on your bedside table. Original artwork and seasonal letter from
-          Clemi. Personalized rituals based on your archetype. Naturalist
-          pages, reflection prompts, and monthly tracker. Digital copy
-          included.
+          Clemi. Personalized rituals based on your archetype. Naturalist pages,
+          reflection prompts, and monthly tracker. Digital copy included.
         </p>
         <p>
           <strong>Digital Edition:</strong> Same complete content as print, in
@@ -116,33 +130,18 @@ const FieldGuide = () => {
         </p>
       </div>
 
-      <div>
-        <h3 className='mt-0'>Pricing</h3>
-        <ul>
-          <li>
-            <strong>Digital Only:</strong> $28/volume | $99/year
-          </li>
-          <li>
-            <strong>Print + Digital:</strong> $55/volume | $195/year
-            <ul className='mt-2 ml-4'>
-              <li>
-                <strong>Founding Subscriber (First 10):</strong>{' '}
-                signed first edition, stickers, Animal Guide portrait for your wall,
-                and access to "Founding Subscribers" community email.
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <p className='text-sm opacity-70'>Early-bird closes June 15, 2026.</p>
+      <div id="subscribe" className="sm:scroll-mt-28">
+        <h3 className="mt-0">Subscribe</h3>
+        <SubscribePicker />
       </div>
 
       <div>
-        <h3 className='mt-0'>Your Archetype</h3>
+        <h3 className="mt-0">Your Archetype</h3>
         <p>Soft discipline looks different depending on who you are.</p>
-        <div className='flex flex-col gap-6'>
+        <div className="flex flex-col gap-6">
           <div>
-            <h4 className='mt-0 mb-1'>Control At All Costs</h4>
-            <p className='mb-0'>
+            <h4 className="mt-0 mb-1">Control At All Costs</h4>
+            <p className="mb-0">
               The architect of order. You move through life by building systems,
               planning ahead, managing risk. Your superpower is structure. The
               cedar waxwing teaches you: abundance and effort is meant to be
@@ -150,8 +149,8 @@ const FieldGuide = () => {
             </p>
           </div>
           <div>
-            <h4 className='mt-0 mb-1'>The Bridge</h4>
-            <p className='mb-0'>
+            <h4 className="mt-0 mb-1">The Bridge</h4>
+            <p className="mb-0">
               The connector, the translator, the one who holds space. You move
               between worlds. Your superpower is empathy. The watersnake teaches
               you: being misunderstood is not your burden to bear. What would
@@ -160,8 +159,8 @@ const FieldGuide = () => {
             </p>
           </div>
           <div>
-            <h4 className='mt-0 mb-1'>Agent of Chaos</h4>
-            <p className='mb-0'>
+            <h4 className="mt-0 mb-1">Agent of Chaos</h4>
+            <p className="mb-0">
               The creator, the disruptor, the one who follows curiosity. You
               move through life by exploring and sensing what wants to emerge.
               Your superpower is innovation. The red squirrel teaches you:

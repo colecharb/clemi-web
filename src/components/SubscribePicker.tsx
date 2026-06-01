@@ -1,31 +1,63 @@
 import { useState } from "react";
 
+type FormatId = "print" | "digital";
 type PlanId = "annual" | "seasonal";
 
-const PLANS = [
+const FORMATS = [
+  { id: "print", label: "Print + Digital" },
+  { id: "digital", label: "Digital Only" },
+] as const satisfies readonly { id: FormatId; label: string }[];
+
+const PLAN_META = [
   {
     id: "annual",
     label: "Annual",
-    price: "$48.75",
     cadence: "/season",
     blurb: "Billed annually",
   },
   {
     id: "seasonal",
     label: "Seasonal",
-    price: "$55",
     cadence: "/season",
     blurb: "Billed quarterly",
   },
 ] as const satisfies readonly { id: PlanId; [key: string]: string }[];
 
+// Price shown per season for each format + plan combination.
+const PRICES: Record<FormatId, Record<PlanId, string>> = {
+  print: { annual: "$48.75", seasonal: "$55" },
+  digital: { annual: "$24.75", seasonal: "$28" },
+};
+
 const SubscribePicker = () => {
+  const [format, setFormat] = useState<FormatId>("print");
   const [plan, setPlan] = useState<PlanId>("annual");
 
   return (
     <div className="flex flex-col items-center gap-6 w-full max-w-xl mx-auto">
+      <div className="inline-flex gap-2 rounded-full p-1">
+        {FORMATS.map((f) => {
+          const isSelected = format === f.id;
+          return (
+            <button
+              key={f.id}
+              type="button"
+              onClick={() => setFormat(f.id)}
+              aria-pressed={isSelected}
+              className={`rounded-full border-2 px-4 py-1.5 text-sm font-bold cursor-pointer transition-all duration-200 ${
+                isSelected
+                  ? "border-[--text] scale-[1.03]"
+                  : "border-transparent opacity-60 hover:opacity-80 scale-100"
+              }`}
+            >
+              {f.label}
+            </button>
+          );
+        })}
+      </div>
+
       <div className="flex flex-col sm:flex-row gap-4 w-full">
-        {PLANS.map((p) => {
+        {PLAN_META.map((p) => {
           const isSelected = plan === p.id;
           return (
             <button
@@ -41,7 +73,7 @@ const SubscribePicker = () => {
             >
               <span className="text-2xl font-bold">{p.label}</span>
               <span className="text-xl font-bold">
-                {p.price}
+                {PRICES[format][p.id]}
                 <span className="text-base font-normal opacity-80">
                   {p.cadence}
                 </span>
@@ -54,12 +86,25 @@ const SubscribePicker = () => {
 
       <button
         type="button"
-        // TODO: wire up Stripe checkout link based on `plan`
+        // TODO: wire up Stripe checkout link based on `format` + `plan`
         onClick={() => {}}
         className="w-64 bg-[#fd7e01] text-[--background] rounded-xl font-bold py-3 hover:opacity-90 transition-opacity cursor-pointer"
       >
         Subscribe {plan === "annual" ? "Annually" : "Seasonally"}
       </button>
+
+      {/* always rendered (toggled with visibility) so page height doesn't shift between print/digital */}
+      <p
+        aria-hidden={format !== "print"}
+        className={`text-sm text-center opacity-70 mb-0 ${
+          format === "print" ? "" : "invisible"
+        }`}
+      >
+        <strong>Founding Subscriber:</strong> The first 10 orders will receive a
+        signed first edition, stickers, Animal Guide portrait for your wall, and
+        access to "Founding Subscribers" community email. Early-bird closes June
+        15, 2026.
+      </p>
     </div>
   );
 };

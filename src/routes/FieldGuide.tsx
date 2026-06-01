@@ -85,7 +85,7 @@ const FieldGuide = () => {
         </ul>
       </div>
 
-      <div className="px-8">
+      <div className="sm:px-8">
         <img
           src="/images/ETC-Wesbite2.jpeg"
           alt="The Field Guide spread"

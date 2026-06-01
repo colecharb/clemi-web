@@ -29,6 +29,18 @@ const PRICES: Record<FormatId, Record<PlanId, string>> = {
   digital: { annual: "$24.75", seasonal: "$28" },
 };
 
+// Stripe checkout links for each format + plan combination.
+const CHECKOUT_LINKS: Record<FormatId, Record<PlanId, string>> = {
+  print: {
+    annual: "https://buy.stripe.com/cNi3cu4K7d2N8Uk2uJ7Zu02",
+    seasonal: "https://buy.stripe.com/4gMaEW1xV4wh9Yo0mB7Zu03",
+  },
+  digital: {
+    annual: "https://buy.stripe.com/aFaaEW6Sf5Al4E4glz7Zu06",
+    seasonal: "https://buy.stripe.com/fZu9ASdgDbYJ5I8b1f7Zu07",
+  },
+};
+
 const SubscribePicker = () => {
   const [format, setFormat] = useState<FormatId>("print");
   const [plan, setPlan] = useState<PlanId>("annual");
@@ -84,14 +96,14 @@ const SubscribePicker = () => {
         })}
       </div>
 
-      <button
-        type="button"
-        // TODO: wire up Stripe checkout link based on `format` + `plan`
-        onClick={() => {}}
-        className="w-64 bg-[#fd7e01] text-[--background] rounded-xl font-bold py-3 hover:opacity-90 transition-opacity cursor-pointer"
+      <a
+        href={CHECKOUT_LINKS[format][plan]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-64 text-center bg-[#fd7e01] text-[--background] rounded-xl font-bold py-3 hover:opacity-90 transition-opacity cursor-pointer !no-underline"
       >
         Subscribe {plan === "annual" ? "Annually" : "Seasonally"}
-      </button>
+      </a>
 
       {/* always rendered (toggled with visibility) so page height doesn't shift between print/digital */}
       <p

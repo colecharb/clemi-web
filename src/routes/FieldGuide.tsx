@@ -1,4 +1,36 @@
+import { useEffect, useState } from "react";
 import SubscribePicker from "../components/SubscribePicker";
+
+const TESTIMONIALS = [
+  "The guidance was gentle and allowed for a lot of self discovery and curiosity without the imposition of more.",
+  "What a lovely framework for meeting yourself where you are in any given moment and building a habit of self-trust.",
+  "Creative, inspiring, and beautiful ... subscription. Subscribing feels a bit like sending my future self little love notes each month.",
+];
+
+const TestimonialRotator = () => {
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisible(false);
+      setTimeout(() => {
+        setIndex((i) => (i + 1) % TESTIMONIALS.length);
+        setVisible(true);
+      }, 800);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <p
+      className="text-xl italic font-light text-center md:text-left mb-0"
+      style={{ transition: "opacity 0.8s ease", opacity: visible ? 1 : 0 }}
+    >
+      "{TESTIMONIALS[index]}"
+    </p>
+  );
+};
 
 const FieldGuide = () => {
   return (
@@ -27,12 +59,8 @@ const FieldGuide = () => {
           alt="The Earth To Clemi Field Guide"
           className="w-full md:w-72 flex-shrink-0 rounded-lg object-cover feathered-edges"
         />
-        <div className="text-xl italic font-light flex flex-col gap-4 text-center md:text-left">
-          <p className="mb-0">A seasonal compass for soft discipline.</p>
-          <p className="mb-0">Original animal illustrations.</p>
-          <p className="mb-0">Rituals designed for your archetype.</p>
-          <p className="mb-0">Reflections to see yourself more clearly.</p>
-          <p className="mb-0">Your companion as you return to self.</p>
+        <div className="flex items-center justify-center md:justify-start">
+          <TestimonialRotator />
         </div>
       </div>
 

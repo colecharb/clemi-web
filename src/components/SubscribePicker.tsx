@@ -115,7 +115,7 @@ const SubscribePicker = () => {
         <strong>Founding Subscriber:</strong> The first 10 orders will receive a
         signed first edition, stickers, Animal Guide portrait for your wall, and
         access to "Founding Subscribers" community email. Early-bird closes June
-        15, 2026.
+        30, 2026.
       </p>
     </div>
   );

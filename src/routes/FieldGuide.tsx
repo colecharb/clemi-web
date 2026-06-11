@@ -3,9 +3,9 @@ import SubscribePicker from "../components/SubscribePicker";
 const FieldGuide = () => {
   return (
     <div className="flex flex-col gap-16">
-      <div>
-        <h2 className="mt-0 text-center">You already know the way home.</h2>
-        <p className="text-2xl text-center">
+      <div className="text-center">
+        <h2 className="mt-0">You already know the way home.</h2>
+        <p className="text-2xl">
           The Field Guide is just here to walk with you.
         </p>
         <button
@@ -37,52 +37,69 @@ const FieldGuide = () => {
       </div>
 
       <div>
-        <h3 className="mt-0">A Field Guide for Your Inner-World</h3>
+        <h3 className="mt-0 font-bold text-center">
+          Cultivating the Self Trust to Become the Most Reliable Guide for the
+          Life You Seek.
+        </h3>
         <p>
-          The Earth To Clemi Field Guide is a homecoming. Your seasonal guide
-          for practicing the art of living in honest rhythm with the natural
-          world. Noticing what you need, resting when rest is required. Inspired
-          by vintage National Geographic and Audubon Naturalist Guides and
-          structured as a personal practice journal. Designed with the rigor of
-          a field naturalist and the intimacy of an older sister.
+          The Earth To Clemi Field Guide is a homecoming. A Field Guide for
+          your Inner World. Your seasonal compass for practicing the art of
+          living in honest rhythm with the natural world. Noticing what you
+          need, resting when rest is required. Inspired by vintage National
+          Geographic and Audubon Naturalist Guides and structured as a personal
+          practice journal. Designed with the rigor of a field naturalist and
+          the intimacy of an older sister.
         </p>
         <p>
-          Each volume is built around a season and an animal guide. You'll
-          discover:
+          Each volume is built around a season and an animal guide. In the
+          guide you'll:
         </p>
         <ul>
           <li>
-            <strong>Original Illustrations</strong> — Hand-drawn, scientifically
-            grounded portraits of your animal guide. Your relatives, showing you
-            what behaviours help them survive and thrive.
+            <strong>Meet your seasonal teacher.</strong> Each volume introduces
+            an animal guide whose survival strategies become a mirror for your
+            own. Hand-illustrated, scientifically grounded, and chosen because
+            they know something you may need to learn this season.
           </li>
           <li>
-            <strong>Naturalist Pages</strong> — Dive into the ecology and
-            behavior of your seasonal animal. Learn how the Cedar Waxwing is
-            followed by forests wherever they go, how the Northern Watersnake
-            passes the winter months, and what the Red Squirrel teaches us about
-            the art of preparation.
+            <strong>Learn the language of the natural world.</strong> The Cedar
+            Waxwing carries forests in its wake. The Red Squirrel channels
+            ferocity into purpose. When you understand how your animal kin
+            survive and thrive, you start to recognize those same instincts
+            alive in you.
           </li>
           <li>
-            <strong>Archetype-Specific Rituals</strong> — Soft discipline looks
-            different depending on who you are. Control At All Costs moves
-            differently than The Bridge or Agent of Chaos. Your rituals are
-            prescribed for your way of practicing, so you can develop your own
-            equilibrium.
+            <strong>Discover rituals designed for how you move through the world.</strong>{' '}
+            Control At All Costs and Agents of Chaos don't practice the same
+            way as the Bridge. Your rituals are prescribed for your archetype,
+            so you're building equilibrium on your own terms, not someone
+            else's.
           </li>
           <li>
-            <strong>Seasonal Frameworks</strong> — Journaling prompts,
-            reflection questions, and a monthly ritual tracker that helps you
-            recognize the rhythms you're already living by.
+            <strong>Develop a structure that holds you without constraining you.</strong>{' '}
+            Journaling prompts, reflection questions, and a monthly tracker
+            that helps you notice the rhythms you're already living by and how
+            to better trust them.
           </li>
           <li>
-            <strong>Astrology & Inner Knowing</strong> — The natural world
-            mirrors our internal seasons. The Field Guide calls on astrology and
-            naturalist portraits of our animal guides to ground you in belonging
-            and connection with nature's intelligence, and builds your
-            confidence to trust that inner knowing.
+            <strong>Know that your intuition is a compass.</strong> The Field
+            Guide helps you learn to read it: through astrology, naturalist
+            observation, and the consistent practice of trusting what you
+            already know.
           </li>
         </ul>
+      </div>
+
+      <div id="subscribe" className="sm:scroll-mt-28">
+        <h3 className="mt-0">Subscribe</h3>
+        <p className="text-lg mb-10">
+          <strong>Founding Subscriber:</strong>{" "}
+          <em>The first 10 orders will receive a signed first edition,
+          stickers, Animal Guide portrait for your wall, and access to
+          "Founding Subscribers" community email. Early-bird closes June 30,
+          2026.</em>
+        </p>
+        <SubscribePicker />
       </div>
 
       <div className="sm:px-8">
@@ -110,32 +127,7 @@ const FieldGuide = () => {
         </p>
       </div>
 
-      <div>
-        <h3 className="mt-0">What You Get</h3>
-        <p>
-          <strong>Print Edition:</strong> 50 pages, eco-friendly
-          risograph-printed by Vide Press in Toronto, with full-color
-          illustrations. Perfect-bound booklet designed to live in your bag or
-          on your bedside table. Original artwork and seasonal letter from
-          Clemi. Personalized rituals based on your archetype. Naturalist pages,
-          reflection prompts, and monthly tracker. Digital copy included.
-        </p>
-        <p>
-          <strong>Digital Edition:</strong> Same complete content as print, in
-          beautiful PDF format.
-        </p>
-        <p>
-          The knowledge that your subscription supports artists creating their
-          offerings intentionally.
-        </p>
-      </div>
-
-      <div id="subscribe" className="sm:scroll-mt-28">
-        <h3 className="mt-0">Subscribe</h3>
-        <SubscribePicker />
-      </div>
-
-      <div>
+      <div className="-mt-8">
         <h3 className="mt-0">Your Archetype</h3>
         <p>Soft discipline looks different depending on who you are.</p>
         <div className="flex flex-col gap-6">
@@ -169,6 +161,28 @@ const FieldGuide = () => {
             </p>
           </div>
         </div>
+      </div>
+
+      <div>
+        <h3 className="mt-0">What You Receive</h3>
+        <p>
+          <strong>Both Editions:</strong> A transformative tool for cultivating
+          the self-trust to become the most reliable guide for the life you
+          seek.
+        </p>
+        <p>
+          <strong>Print Edition:</strong> 50 pages, eco-friendly
+          risograph-printed by Vide Press in Toronto, with full-color
+          illustrations. Perfect-bound booklet designed to live in your bag or
+          on your bedside table. Original artwork and seasonal letter from
+          Clemi. Personalized rituals based on your archetype. Naturalist
+          pages, reflection prompts, and monthly tracker. Digital copy
+          included.
+        </p>
+        <p>
+          <strong>Digital Edition:</strong> Same complete content as print, in
+          beautiful PDF format.
+        </p>
       </div>
     </div>
   );

@@ -66,7 +66,7 @@ const FieldGuide = () => {
 
       <div>
         <h3 className="mt-0 font-bold text-center">
-          Cultivating the Self Trust to Become the Most Reliable Guide for the
+          Cultivating Self Trust to Become the Most Reliable Guide for the
           Life You Seek.
         </h3>
         <p>

@@ -66,17 +66,17 @@ const FieldGuide = () => {
 
       <div>
         <h3 className="mt-0 font-bold text-center">
-          Cultivating Self Trust to Become the Most Reliable Guide for the
-          Life You Seek.
+          Biophilic Living for Loving Your Life
         </h3>
         <p>
           The Earth To Clemi Field Guide is a homecoming. A Field Guide for
           your Inner World. Your seasonal compass for practicing the art of
-          living in honest rhythm with the natural world. Noticing what you
-          need, resting when rest is required. Inspired by vintage National
-          Geographic and Audubon Naturalist Guides and structured as a personal
-          practice journal. Designed with the rigor of a field naturalist and
-          the intimacy of an older sister.
+          living in honest rhythm with the natural world. The art of biophilic
+          living, in which you design a lifestyle rooted in connection to the
+          natural world and to yourself. Inspired by vintage National Geographic
+          and Audubon Naturalist Guides and structured as a personal practice
+          journal. Designed with the rigor of a field naturalist and the
+          intimacy of an older sister.
         </p>
         <p>
           Each volume is built around a season and an animal guide. In the

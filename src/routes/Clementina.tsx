@@ -1,45 +1,107 @@
 const Clementina = () => {
   return (
     <div className='flex flex-col gap-10'>
-      <div className='flex flex-col lg:flex-row lg:place-items-center place-items-center gap-10'>
-        <div className='flex h-60 rounded-full aspect-square overflow-clip flex-shrink-0'>
-          <img
-            className='h-full'
-            src='/images/clementina.JPG'
-          />
-        </div>
+      <div className='relative left-1/2 right-1/2 -mx-[50vw] w-screen h-[48vh] min-h-[320px] lg:h-[80vh] overflow-hidden'>
+        <img
+          className='absolute inset-0 w-full h-full object-cover'
+          src='/images/Clemi-Faroe.jpeg'
+          alt='Clementina Consens'
+        />
+        <div className='hidden lg:block absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[--background]/90' />
+        <div className='hidden lg:block absolute inset-0'>
+          <div className='absolute top-1/2 -translate-y-1/2 left-[40%] max-w-lg pr-10 [text-shadow:0_2px_8px_rgba(0,0,0,0.5)]'>
+            <h2 className='mt-0 whitespace-nowrap'>Clementina Consens</h2>
 
-        <div>
-          <h2 className='mt-0'>Clementina Consens</h2>
-
-          <p>
-            is an artist, program designer, and environmental scientist with
-            over eight years of experience at the intersection of
-            environmental, artistic, and social projects. Soft self-discipline
-            is their wellness practice for embodied responsibility to
-            themselves and their communities, a devotional approach to rituals
-            aligned with nature's cyclical cues. She is most at home either in
-            Uruguay or the Great Lakes region, sharing a mate by the ocean, or
-            cooking over a fire with her loved ones.
-          </p>
-          <p>
-            Clementina welcomes you to explore her in-season offerings and take
-            the{' '}
-            <a
-              href='https://tally.so/r/xXZVEE'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              soft discipline archetype quiz
-            </a>{' '}
-            to learn more about your nature.
-          </p>
+            <p>
+              Clementina Consens is an artist, program designer, and
+              environmental scientist with over eight years of experience at
+              the intersection of environmental, artistic, and social
+              projects. Their work as Earth To Clemi focuses on "Biophilic
+              Living for Loving your Life", an eco-centric approach to
+              personal and collective wellbeing. She is most at home either in
+              Uruguay or the Great Lakes region, sharing a mate by the ocean, or
+              cooking over a fire with her loved ones.
+            </p>
+            <p>
+              Clementina welcomes you to explore her in-season offerings and
+              subscribe to the{' '}
+              <a
+                href='https://www.clementina.earth/field-guide'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Earth To Clemi Field Guide
+              </a>
+              , released seasonally.
+            </p>
+          </div>
         </div>
+      </div>
+
+      <div className='lg:hidden'>
+        <h2 className='mt-0'>Clementina Consens</h2>
+
+        <p>
+          Clementina Consens is an artist, program designer, and
+          environmental scientist with over eight years of experience at the
+          intersection of environmental, artistic, and social projects. Their
+          work as Earth To Clemi focuses on "Biophilic Living for Loving your
+          Life", an eco-centric approach to personal and collective
+          wellbeing. She is most at home either in Uruguay or the Great Lakes
+          region, sharing a mate by the ocean, or cooking over a fire with her
+          loved ones.
+        </p>
+        <p>
+          Clementina welcomes you to explore her in-season offerings and
+          subscribe to the{' '}
+          <a
+            href='https://www.clementina.earth/field-guide'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Earth To Clemi Field Guide
+          </a>
+          , released seasonally.
+        </p>
       </div>
 
       <div>
         <h3>In Season</h3>
         <div className='flex flex-col gap-4'>
+          <a
+            href='https://www.clementina.earth/field-guide'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
+          >
+            <img
+              src='/images/ETC-FieldGuide-Promo.jpeg'
+              alt='Earth To Clemi Field Guide'
+              className='h-32 w-32 object-cover flex-shrink-0'
+            />
+            <div className='p-4 flex flex-col gap-2 justify-center'>
+              <p className='mb-0 font-bold'>Earth To Clemi Field Guide</p>
+              <p className='mb-0 text-sm opacity-70'>seasonal biophilic living companion</p>
+            </div>
+          </a>
+
+          <a
+            href='https://ecoanxietyworkshop.splashthat.com/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
+          >
+            <img
+              src='/images/PatagoniaToronto.png'
+              alt='Biophilic Living for Loving your Life'
+              className='h-32 w-32 object-cover flex-shrink-0'
+            />
+            <div className='p-4 flex flex-col gap-2 justify-center'>
+              <p className='mb-0 font-bold'>Biophilic Living for Loving your Life</p>
+              <p className='mb-0 text-sm opacity-70'>workshop with Patagonia Toronto</p>
+            </div>
+          </a>
+
           <a
             href='https://clemiworld.gumroad.com/l/foundationsofsoftdiscipline'
             target='_blank'

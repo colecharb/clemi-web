@@ -104,19 +104,6 @@ const SubscribePicker = () => {
       >
         Subscribe {plan === "annual" ? "Annually" : "Seasonally"}
       </a>
-
-      {/* always rendered (toggled with visibility) so page height doesn't shift between print/digital */}
-      <p
-        aria-hidden={format !== "print"}
-        className={`text-sm text-center opacity-70 mb-0 ${
-          format === "print" ? "" : "invisible"
-        }`}
-      >
-        <strong>Founding Subscriber:</strong> The first 10 orders will receive a
-        signed first edition, stickers, Animal Guide portrait for your wall, and
-        access to "Founding Subscribers" community email. Early-bird closes June
-        30, 2026.
-      </p>
     </div>
   );
 };

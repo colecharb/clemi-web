@@ -1,113 +1,176 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import SubscribePicker from "../components/SubscribePicker";
 
 const TESTIMONIALS = [
   "The guidance was gentle and allowed for a lot of self discovery and curiosity without the imposition of more.",
   "What a lovely framework for meeting yourself where you are in any given moment and building a habit of self-trust.",
   "Creative, inspiring, and beautiful ... subscription. Subscribing feels a bit like sending my future self little love notes each month.",
+  "Your field guides are gorgeous!",
 ];
 
-const TestimonialRotator = () => {
-  const [index, setIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
+const FIELD_GUIDE_IMAGES = [
+  "/images/FieldGuideImage1.jpeg",
+  "/images/FieldGuideImage2.jpeg",
+  "/images/FieldGuideImage3.jpeg",
+  "/images/FieldGuideImage4.jpeg",
+  "/images/FieldGuideImage5.jpeg",
+];
+
+// Cycle length long enough that image + testimonial advance together but
+// each array still wraps at its own, different length.
+const CYCLE_LENGTH = FIELD_GUIDE_IMAGES.length * TESTIMONIALS.length;
+
+const FieldGuideImageCarousel = () => {
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [textVisible, setTextVisible] = useState(true);
+
+  const imageIndex = current % FIELD_GUIDE_IMAGES.length;
+  const testimonialIndex = current % TESTIMONIALS.length;
+
+  const next = useCallback(
+    () => setCurrent((i) => (i + 1) % CYCLE_LENGTH),
+    [],
+  );
+  const prev = useCallback(
+    () => setCurrent((i) => (i - 1 + CYCLE_LENGTH) % CYCLE_LENGTH),
+    [],
+  );
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setIndex((i) => (i + 1) % TESTIMONIALS.length);
-        setVisible(true);
-      }, 800);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    if (paused) return;
+    const id = setInterval(next, 5000);
+    return () => clearInterval(id);
+  }, [paused, next]);
+
+  useEffect(() => {
+    setTextVisible(false);
+    const id = setTimeout(() => setTextVisible(true), 50);
+    return () => clearTimeout(id);
+  }, [testimonialIndex]);
 
   return (
-    <p
-      className="text-xl italic font-light text-center md:text-left mb-0"
-      style={{ transition: "opacity 0.8s ease", opacity: visible ? 1 : 0 }}
+    <div
+      className="sm:px-8"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
     >
-      "{TESTIMONIALS[index]}"
-    </p>
+      <div className="relative overflow-hidden rounded-lg">
+        <img
+          src={FIELD_GUIDE_IMAGES[imageIndex]}
+          alt="The Field Guide spread"
+          className="w-full aspect-[4/3] object-cover object-center"
+        />
+        <div
+          className="absolute top-6 left-1/2 -translate-x-1/2 w-[92%] rounded-full px-8 py-4"
+          style={{ backgroundColor: "color-mix(in srgb, var(--background) 40%, transparent)" }}
+        >
+          <p
+            className="text-base italic font-light text-center mb-0 [text-shadow:0_2px_8px_rgba(0,0,0,0.6)]"
+            style={{ transition: "opacity 0.8s ease", opacity: textVisible ? 1 : 0 }}
+          >
+            "{TESTIMONIALS[testimonialIndex]}"
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={prev}
+          aria-label="Previous image"
+          className="absolute left-2 top-1/2 -translate-y-1/2 text-3xl leading-none opacity-70 hover:opacity-100 transition-opacity cursor-pointer [text-shadow:0_2px_6px_rgba(0,0,0,0.6)]"
+          style={{ color: "var(--text)" }}
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          onClick={next}
+          aria-label="Next image"
+          className="absolute right-2 top-1/2 -translate-y-1/2 text-3xl leading-none opacity-70 hover:opacity-100 transition-opacity cursor-pointer [text-shadow:0_2px_6px_rgba(0,0,0,0.6)]"
+          style={{ color: "var(--text)" }}
+        >
+          ›
+        </button>
+      </div>
+
+      <div className="flex gap-2 justify-center mt-4">
+        {FIELD_GUIDE_IMAGES.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            onClick={() => setCurrent(i)}
+            aria-label={`Go to image ${i + 1}`}
+            className="w-2 h-2 rounded-full transition-opacity cursor-pointer"
+            style={{
+              backgroundColor: "var(--text)",
+              opacity: i === imageIndex ? 1 : 0.35,
+            }}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 
 const FieldGuide = () => {
   return (
     <div className="flex flex-col gap-16">
-      <div className="text-center">
-        <h2 className="mt-0">You already know the way home.</h2>
-        <p className="text-2xl">
-          The Field Guide is just here to walk with you.
-        </p>
-        <button
-          type="button"
-          onClick={() =>
-            document
-              .getElementById("subscribe")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-          className="block w-64 mx-auto mt-8 border-2 border-[#fd7e01] text-[#fd7e01] rounded-xl font-bold py-3 hover:opacity-90 transition-opacity cursor-pointer"
-        >
-          Subscribe
-        </button>
-      </div>
-
-      <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
+      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-hidden flex items-end lg:items-center justify-center py-28 lg:pt-64 lg:pb-56 px-6">
         <img
-          src="/images/ETC-Website.jpeg"
+          src="/images/FieldGuideHero.jpeg"
           alt="The Earth To Clemi Field Guide"
-          className="w-full md:w-72 flex-shrink-0 rounded-lg object-cover feathered-edges"
+          className="absolute inset-0 w-full h-full object-cover object-center lg:object-top"
         />
-        <div className="flex items-center justify-center md:justify-start">
-          <TestimonialRotator />
+        <div className="relative z-10 text-center max-w-2xl [text-shadow:0_2px_8px_rgba(0,0,0,0.6)]">
+          <h2 className="mt-0">The Field Guide for a Biophilic Lifestyle</h2>
+          <button
+            type="button"
+            onClick={() =>
+              document
+                .getElementById("subscribe")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="block w-64 mx-auto mt-8 border-2 border-[#fd7e01] bg-[#fd7e01]/25 text-[#fd7e01] rounded-xl font-bold py-3 hover:opacity-90 transition-opacity cursor-pointer [filter:drop-shadow(0_2px_8px_rgba(0,0,0,0.6))]"
+          >
+            Subscribe
+          </button>
         </div>
       </div>
 
       <div>
-        <h3 className="mt-0 font-bold text-center">
-          Biophilic Living for Loving Your Life
+        <h3 className="mt-0 font-bold text-left">
+          Found within...
         </h3>
         <p>
-          The Earth To Clemi Field Guide is a homecoming. A Field Guide for
-          your Inner World. Your seasonal compass for practicing the art of
-          living in honest rhythm with the natural world. The art of biophilic
-          living, in which you design a lifestyle rooted in connection to the
-          natural world and to yourself. Inspired by vintage National Geographic
-          and Audubon Naturalist Guides and structured as a personal practice
-          journal. Designed with the rigor of a field naturalist and the
+          The Earth To Clemi Field Guide is your seasonal compass for
+          practicing the art of biophilic living. In which you design a
+          lifestyle rooted in the relationship to the natural world and to
+          yourself. Inspired by vintage National Geographic and Audubon
+          Naturalist Guides and structured as a personal practice journal.
+          Designed with the scientific rigor of a field naturalist and the
           intimacy of an older sister.
         </p>
         <p>
-          Each volume is built around a season and an animal guide. In the
+          Each volume is built around the wisdom of each season. In the
           guide you'll:
         </p>
         <ul>
           <li>
             <strong>Meet your seasonal teacher.</strong> Each volume introduces
-            an animal guide whose survival strategies become a mirror for your
-            own. Hand-illustrated, scientifically grounded, and chosen because
-            they know something you may need to learn this season.
+            an animal guide whose life practices become a mirror for your own.
+            When you understand how your animal kin survive and thrive, you
+            start to recognize those same instincts alive in you.
           </li>
           <li>
-            <strong>Learn the language of the natural world.</strong> The Cedar
-            Waxwing carries forests in its wake. The Red Squirrel channels
-            ferocity into purpose. When you understand how your animal kin
-            survive and thrive, you start to recognize those same instincts
-            alive in you.
+            <strong>Learn the language of the natural world.</strong> Whether
+            it's understanding your ecosystem service role or the way nurse
+            logs offer us lessons on life disruptions, there is structure to
+            be found in nature's intelligence.
           </li>
           <li>
-            <strong>Discover rituals designed for how you move through the world.</strong>{' '}
-            Control At All Costs and Agents of Chaos don't practice the same
-            way as the Bridge. Your rituals are prescribed for your archetype,
-            so you're building equilibrium on your own terms, not someone
-            else's.
-          </li>
-          <li>
-            <strong>Develop a structure that holds you without constraining you.</strong>{' '}
+            <strong>Develop a lifestyle that has you falling in love with your life.</strong>{' '}
             Journaling prompts, reflection questions, and a monthly tracker
             that helps you notice the rhythms you're already living by and how
-            to better trust them.
+            to tune them towards happiness.
           </li>
           <li>
             <strong>Know that your intuition is a compass.</strong> The Field
@@ -120,96 +183,30 @@ const FieldGuide = () => {
 
       <div id="subscribe" className="sm:scroll-mt-28">
         <h3 className="mt-0">Subscribe</h3>
-        <p className="text-lg mb-10">
-          <strong>Founding Subscriber:</strong>{" "}
-          <em>The first 10 orders will receive a signed first edition,
-          stickers, Animal Guide portrait for your wall, and access to
-          "Founding Subscribers" community email. Early-bird closes June 30,
-          2026.</em>
-        </p>
         <SubscribePicker />
       </div>
 
       <div className="sm:px-8">
-        <img
-          src="/images/ETC-Wesbite2.jpeg"
-          alt="The Field Guide spread"
-          className="w-full rounded-lg object-cover feathered-edges"
-        />
-      </div>
-
-      <div>
-        <h3 className="mt-0">On Soft Discipline…</h3>
-        <p>
-          Soft discipline is rooted in seasonal living, a return to self, and
-          reconnection to the natural world. It's the understanding that you are
-          not separate from nature; you are nature. Your energy follows your
-          life's seasons. Your body has rhythms. Your soul knows things your
-          mind hasn't caught up to yet.
-        </p>
-        <p>
-          This Field Guide walks you through that reconnection. An invitation to
-          be compassionately disciplined with how you show up for yourself. To
-          know when to trust the quiet pull toward rest. To recognize when
-          effort is required. To choose peace in the present moment.
-        </p>
-      </div>
-
-      <div className="-mt-8">
-        <h3 className="mt-0">Your Archetype</h3>
-        <p>Soft discipline looks different depending on who you are.</p>
-        <div className="flex flex-col gap-6">
-          <div>
-            <h4 className="mt-0 mb-1">Control At All Costs</h4>
-            <p className="mb-0">
-              The architect of order. You move through life by building systems,
-              planning ahead, managing risk. Your superpower is structure. The
-              cedar waxwing teaches you: abundance and effort is meant to be
-              shared. What can you let go of?
-            </p>
-          </div>
-          <div>
-            <h4 className="mt-0 mb-1">The Bridge</h4>
-            <p className="mb-0">
-              The connector, the translator, the one who holds space. You move
-              between worlds. Your superpower is empathy. The watersnake teaches
-              you: being misunderstood is not your burden to bear. What would
-              happen if you offered yourself the empathy you so easily extend to
-              others?
-            </p>
-          </div>
-          <div>
-            <h4 className="mt-0 mb-1">Agent of Chaos</h4>
-            <p className="mb-0">
-              The creator, the disruptor, the one who follows curiosity. You
-              move through life by exploring and sensing what wants to emerge.
-              Your superpower is innovation. The red squirrel teaches you:
-              scattered energy can be channeled for your purpose. What if your
-              ferocity had a rhythm that sustained you?
-            </p>
-          </div>
-        </div>
+        <FieldGuideImageCarousel />
       </div>
 
       <div>
         <h3 className="mt-0">What You Receive</h3>
         <p>
           <strong>Both Editions:</strong> A transformative tool for cultivating
-          the self-trust to become the most reliable guide for the life you
-          seek.
+          a biophilic lifestyle that you love.
         </p>
         <p>
-          <strong>Print Edition:</strong> 50 pages, eco-friendly
-          risograph-printed by Vide Press in Toronto, with full-color
-          illustrations. Perfect-bound booklet designed to live in your bag or
-          on your bedside table. Original artwork and seasonal letter from
-          Clemi. Personalized rituals based on your archetype. Naturalist
-          pages, reflection prompts, and monthly tracker. Digital copy
-          included.
+          <strong>Print Edition:</strong> 50-page, eco-friendly
+          risograph-printed booklet by Vide Press in Toronto, with full-color
+          original illustrations by Clemi. Designed to live in your bag or on
+          your bedside table. Personalized rituals based on your archetype.
+          Naturalist pages, reflection prompts, and monthly tracker. Digital
+          copy included.
         </p>
         <p>
           <strong>Digital Edition:</strong> Same complete content as print, in
-          beautiful PDF format.
+          PDF format.
         </p>
       </div>
     </div>

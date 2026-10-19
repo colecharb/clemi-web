@@ -30,66 +30,37 @@ const professionalExperiences: ProfExperienceEntry[] = [
     ],
   },
   {
-    title: 'TransCare+ External Facilitator',
+    title: 'External Facilitator',
     timeframe: '2019–Present',
     company: 'Self Employed',
     bullets: [
-      'Designed and delivered workshops for non-profit employees to develop self-care rituals to support their wellness at work',
+      'Toronto Public Library, Spring Environmentalist in Residence (2026)',
+      'Transcare+ Workshops (2023–2024)',
+      'St. Jamestown Community Co-op Research Lead (2022–2023)',
+      'Indigenous Consulting (2020–2021)',
+      'Tavares Consulting (2019)',
+    ],
+  },
+  {
+    title: 'Data Specialist',
+    company: 'Heliolytics',
+    timeframe: '2019–2020',
+    bullets: [
+      'Provided reports on solar-farm damage for solar projects across North America',
     ],
   },
   {
     title: 'Junior Environmental Scientist',
-    company: 'Heliolytics',
-    timeframe: '2019–2020',
-    bullets: ['Data Specialist | Solar Energy'],
-  },
-  {
-    title: 'Sustainability Associate | Environment & Indigenous Relations',
     company: 'Ontario First Nations Technical Services Corporation',
     timeframe: '2018',
     bullets: ['Focused on environmental and Indigenous relations initiatives'],
   },
   {
-    title:
-      'Independent Consultant | Facilitation, Research, & Artistic Projects',
+    title: 'Sustainability Associate | Environment & Indigenous Relations',
     company: 'Tavares Group Consulting for Bruce Power',
     timeframe: '2017–2018',
     bullets: [
       'Provided consulting services for Bruce Power through Tavares Group',
-    ],
-  },
-  {
-    title: 'Project Manager & Research Support',
-    company: 'Keesic Health Strategies',
-    timeframe: '2017–2018',
-    bullets: [
-      'Collaborated on developing the Mental Health and Addictions Business Case for Weeneebayko Area Health Authority which focused needs of remote Indigenous communities in Northern Ontario',
-    ],
-  },
-  {
-    title: 'Project Coordination & Engagement Strategist',
-    company: 'Indigenous Primary Health Care Council',
-    timeframe: '2017–2018',
-    bullets: [
-      'Provided project coordination, outreach and engagement lead, stakeholder mapping and reporting',
-      'Was responsible for designing and creating a Traditional Healing Directory Report',
-    ],
-  },
-  {
-    title: 'Research Lead',
-    company: 'St. Jamestown Community Co-op',
-    timeframe: '2017–2018',
-    bullets: [
-      'Supported in the development of Climate Change research policy for local food production and procurement to improve community health metrics',
-      'Built on the Human Rights framework used by the co-operative and provided Climate Justice and Climate Action workshops for the community',
-    ],
-  },
-  {
-    title: 'Communications Strategist',
-    company: 'AS Williams Consulting',
-    timeframe: '2017–2018',
-    bullets: [
-      'Collaborated with lawyer Saga Williams for Canadian Virtual Hospice, Indigenous Health outreach, as a communications strategist',
     ],
   },
 ];

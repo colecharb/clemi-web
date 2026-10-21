@@ -69,6 +69,27 @@ const Clementina = () => {
         <h3>In Season</h3>
         <div className='flex flex-col gap-4'>
           <a
+            href='https://www.saorstudio.com/packages?_mt=%2Fbuy%2F48717%3FactiveProduct%3Dcredits-15158'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='border border-[--text] rounded-xl overflow-clip flex flex-row hover:opacity-80 transition-opacity'
+          >
+            <img
+              src='/images/SAOR-NovRestore.jpeg'
+              alt="Nature's Guidance for a Restorative November"
+              className='h-32 w-32 object-cover flex-shrink-0'
+            />
+            <div className='p-4 flex flex-col gap-2 justify-center'>
+              <p className='mb-0 font-bold'>
+                Nature's Guidance for a Restorative November
+              </p>
+              <p className='mb-0 text-sm opacity-70'>
+                November 1st Restore Class
+              </p>
+            </div>
+          </a>
+
+          <a
             href='https://www.clementina.earth/field-guide'
             target='_blank'
             rel='noopener noreferrer'

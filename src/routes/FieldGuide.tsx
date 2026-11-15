@@ -155,6 +155,23 @@ const FieldGuide = () => {
         </p>
         <ul>
           <li>
+            <strong>
+              Notice how you show up under stress so that you can bring
+              yourself into balance.
+            </strong>{' '}
+            Find out in the{' '}
+            <a
+              href='https://tally.so/r/xXZVEE'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              quiz
+            </a>{' '}
+            which rock archetype you tend towards under stress, and receive
+            tailored rituals for each month that support you in developing
+            soft discipline.
+          </li>
+          <li>
             <strong>Meet your seasonal teacher.</strong> Each volume introduces
             an animal guide whose life practices become a mirror for your own.
             When you understand how your animal kin survive and thrive, you
